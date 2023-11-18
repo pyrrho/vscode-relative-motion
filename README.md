@@ -4,6 +4,12 @@ Vaguely vim-like cursor-relative line jumping through the Command Pallette.
 
 This extension is intended for use with the `"editor.lineNumbers": "relative"` setting by adding commands for navigating up and down a user-provided number of lines through a Command Pallette Input Box.
 
+Inspiration was taken from the built-in 'Go to line/column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension
+
+[relativity]: https://marketplace.visualstudio.com/items?itemName=EnkelDigital.relativity
+[EnkelDigital]: https://github.com/Enkel-Digital/
+[JJ Lee]: https://github.com/Jaimeloeuf
+
 ## Features
 
 Provides the following key-bindings;
