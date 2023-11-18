@@ -2,7 +2,7 @@
   "name": "vscode-relative-motion",
   "displayName": "Relative Motion",
   "description": "Vaguely vim-like cursor-relative line jumping",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "categories": [
     "Other"
   ],
