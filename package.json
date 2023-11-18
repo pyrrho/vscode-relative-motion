@@ -3,19 +3,33 @@
   "displayName": "Relative Motion",
   "description": "Vaguely vim-like cursor-relative line jumping",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.84.0"
-  },
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyrrho/vscode-relative-motion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pyrrho/vscode-relative-motion/issues"
+  },
+  "author": "Drew Pirrone-Brusse",
+  "publisher": "Drew Pirrone-Brusse",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-relative-motion.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-relative-motion.up",
+        "title": "Relative Motion Up"
+      },
+      {
+        "command": "vscode-relative-motion.down",
+        "title": "Relative Motion Down"
       }
     ]
   },
