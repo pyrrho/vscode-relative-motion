@@ -6,9 +6,12 @@ This extension is intended for use with the `"editor.lineNumbers": "relative"` s
 
 Inspiration was taken from the built-in 'Go to line/column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension
 
-[relativity]: https://marketplace.visualstudio.com/items?itemName=EnkelDigital.relativity
 [EnkelDigital]: https://github.com/Enkel-Digital/
 [JJ Lee]: https://github.com/Jaimeloeuf
+[relativity]: https://marketplace.visualstudio.com/items?itemName=EnkelDigital.relativity
+
+TODO: Add scripts for bundling the extension
+TODO: Publish the extension
 
 ## Features
 
@@ -19,6 +22,7 @@ Provides the following key-bindings;
 TODO: Capture an animation of the extension in action.
 
 TODO: Add Command Pallette commands to bring up the Relative Motion Input Box.
+TODO: Add default key bindings. alt+j for down, alt+k for up?
 
 <!-- \!\[feature X\]\(images/feature-x.png\) -->
 
