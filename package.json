@@ -25,11 +25,23 @@
     "commands": [
       {
         "command": "vscode-relative-motion.up",
-        "title": "Relative Motion Up"
+        "title": "Relative Motion: Navigate Up"
       },
       {
         "command": "vscode-relative-motion.down",
-        "title": "Relative Motion Down"
+        "title": "Relative Motion: Navigate Down"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-relative-motion.up",
+        "key": "alt+k",
+        "when": "editorFocus"
+      },
+      {
+        "command": "vscode-relative-motion.down",
+        "key": "alt+j",
+        "when": "editorFocus"
       }
     ]
   },

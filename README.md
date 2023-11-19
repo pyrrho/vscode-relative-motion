@@ -11,6 +11,7 @@ Inspiration was taken from the built-in 'Go to line/column' (`workbench.action.g
 [relativity]: https://marketplace.visualstudio.com/items?itemName=EnkelDigital.relativity
 
 TODO: Add scripts for bundling the extension
+
 TODO: Publish the extension
 
 ## Features
@@ -20,9 +21,6 @@ Provides the following key-bindings;
 - `vscode-relative-motion.down`
 
 TODO: Capture an animation of the extension in action.
-
-TODO: Add Command Pallette commands to bring up the Relative Motion Input Box.
-TODO: Add default key bindings. alt+j for down, alt+k for up?
 
 <!-- \!\[feature X\]\(images/feature-x.png\) -->
 

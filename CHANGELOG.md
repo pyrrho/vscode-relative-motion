@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Default keybindings; alt+j for navigate down, alt+k for navigate up.
+
 ## [0.1.0]
 
 ### Added
