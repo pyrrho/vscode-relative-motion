@@ -36,8 +36,6 @@ Though not a strict requirement, this extension makes a lot more sense when usin
 
 ## Extension Settings
 
-// TODO: Expose an enable/disable setting.
-
 <!-- This extension contributes the following settings:
 
 * `myExtension.enable`: Enable/disable this extension.
