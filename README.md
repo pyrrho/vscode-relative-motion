@@ -16,13 +16,14 @@ TODO: Publish the extension
 
 ## Features
 
-Provides the following key-bindings;
-- `vscode-relative-motion.up`
-- `vscode-relative-motion.down`
+Provides the following commands;
 
-TODO: Capture an animation of the extension in action.
+|                               |         |
+| :---------------------------- | ------- |
+| `vscode-relative-motion.up`   | `alt+k` |
+| `vscode-relative-motion.down` | `alt+j` |
 
-<!-- \!\[feature X\]\(images/feature-x.png\) -->
+![Relative Motion Demo](images/vscode-relative-motion-demo.gif)
 
 ## Requirements
 
