@@ -43,7 +43,17 @@
         "key": "alt+j",
         "when": "editorFocus"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Relative Motion",
+      "properties": {
+        "relativeMotion.previewRelativeLineNumbers": {
+          "type": "boolean",
+          "default": true,
+          "description": "Render relative line numbers when previewing Relative Motion's navigation."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

@@ -2,8 +2,6 @@
 
 Vaguely vim-like cursor-relative line jumping through the Command Pallette.
 
-This extension is intended for use with the `"editor.lineNumbers": "relative"` setting by adding commands for navigating up and down a user-provided number of lines through a Command Pallette Input Box.
-
 Inspiration was taken from the built-in 'Go to line/column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension
 
 [EnkelDigital]: https://github.com/Enkel-Digital/
@@ -18,27 +16,17 @@ TODO: Publish the extension
 
 Provides the following commands;
 
-|                               |         |
-| :---------------------------- | ------- |
-| `vscode-relative-motion.up`   | `alt+k` |
-| `vscode-relative-motion.down` | `alt+j` |
+|                                |         |                               |
+| :----------------------------- | ------- | :---------------------------- |
+| Relative Motion: Navigate Up   | `alt+k` | `vscode-relative-motion.up`   |
+| Relative Motion: Navigate Down | `alt+j` | `vscode-relative-motion.down` |
 
 ![Relative Motion Demo](images/vscode-relative-motion-demo.gif)
 
-## Requirements
-
-Though not a strict requirement, this extension makes a lot more sense when using relative line numbers,
-
-// TODO: Capture a image of the VSCode setting & a file showing relative line numbers.
-
-// TODO: You know... I can probably override the gutter's style, same way the built-in 'Go to line/column' command does. That sounds fun, and also like something that should be opt-out-able w/ an extension setting.
 
 ## Extension Settings
 
-<!-- This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something. -->
+* `relativeMotion.previewRelativeLineNumbers`: Render relative line numbers when previewing Relative Motion's navigation.
 
 ## Known Issues
 

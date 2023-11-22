@@ -140,6 +140,32 @@ function createInputBox(
   editor: vscode.TextEditor,
   direction: 'up' | 'down',
 ): vscode.InputBox {
+
+  // Optionally override line number rendering to be relative instead of
+  // absolute while the input box is open.
+  const initialLineNumberOption = editor.options.lineNumbers;
+  const renderRelativeNumbers = vscode
+    .workspace
+    .getConfiguration('relativeMotion')
+    .get<boolean>('previewRelativeLineNumbers') ?? true;
+
+  // FIXME: Work around not being able to differentiate between line numbers
+  //        being set to 'on' vs 'interval' through the `editor.options` member
+  //        bt reading the workspace configuration directly. If line numbers are
+  //        set to 'interval', we're going to not do the override, because we
+  //        would either 1. need to edit a workspace or global configuration
+  //        file to turn the interval on/off, or 2. we would accidentally return
+  //        the line numbers configuration to 'on' instead of 'interval' by
+  //        assigning ` editor.options.lineNumbers = 1;`.
+  const initialLineNumberConfig = vscode
+    .workspace
+    .getConfiguration('editor')
+    .get('lineNumbers');
+
+  if (renderRelativeNumbers && initialLineNumberConfig === 'on') {
+    editor.options.lineNumbers = vscode.TextEditorLineNumbersStyle.Relative;
+  }
+
   // Capture the current visible range and selection as our final targets s.t.
   // when an input box is canceled we can restore the editor to its prior state.
   // FIXME: When will `.visibleRanges.length` be > 1?
@@ -214,6 +240,11 @@ function createInputBox(
   // On exit -- due to either an accept or cancel -- clear any previous
   // highlights and move the visible range and selection to the final targets.
   inputBox.onDidHide(() => {
+    // Restore the line number configuration to its initial state.
+    if (renderRelativeNumbers && initialLineNumberConfig === 'on') {
+      editor.options.lineNumbers = initialLineNumberOption;
+    }
+
     clearHighlight(editor);
     editor.revealRange(finalRange, vscode.TextEditorRevealType.Default);
     editor.selection = finalSelection;
