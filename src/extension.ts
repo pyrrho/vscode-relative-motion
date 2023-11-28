@@ -310,9 +310,10 @@ function sanitizeInput(
     };
   }
 
-  // FIXME: Is column and absolute or relative position?
+  // FIXME: Is column an absolute or relative position? Should columnar movement
+  //        be allowed at all?
   // FIXME: Should targetColumn be capped, or is an invalid value `undefined`?
-  const targetColumn = 1 >= inputColumn
+  const targetColumn = inputColumn <= 1
     ? 1
     : inputColumn <= targetLineLength + 1
       ? inputColumn
