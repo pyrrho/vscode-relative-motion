@@ -2,7 +2,7 @@
 
 Like 'Go to Line/Column' but relative instead of absolute; vaguely vim-like cursor-relative line-jumping through the Command Pallette.
 
-Inspiration was taken from the built-in 'Go to line/column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension.
+Inspiration was taken from the built-in 'Go to Line/Column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension.
 
 [EnkelDigital]: https://github.com/Enkel-Digital/
 [JJ Lee]: https://github.com/Jaimeloeuf
@@ -13,10 +13,10 @@ Inspiration was taken from the built-in 'Go to line/column' (`workbench.action.g
 
 Provides the following commands;
 
-|                                |         |                               |
-| :----------------------------- | ------- | :---------------------------- |
-| Relative Motion: Navigate Up   | `alt+k` | `vscode-relative-motion.up`   |
-| Relative Motion: Navigate Down | `alt+j` | `vscode-relative-motion.down` |
+| Action                         | Keybinding       | Command                       |
+| :----------------------------- | ---------------- | :---------------------------- |
+| Relative Motion: Navigate Up   | <kbd>alt+k</kbd> | `vscode-relative-motion.up`   |
+| Relative Motion: Navigate Down | <kbd>alt+j</kbd> | `vscode-relative-motion.down` |
 
 ![Relative Motion Demo](images/vscode-relative-motion-demo.gif)
 
@@ -28,11 +28,26 @@ Provides the following commands;
 
 ## Known Issues
 
-None yet!
+- `previewRelativeLineNumbers` interacts poorly with the `"editor.lineNumbers" = "interval"`.
+
+  tl;dr - if the active editor is rendering `"interval"` line numbers, `previewRelativeLineNumbers` is ignored.  
+  This is because `vscode.window.activeTextEditor.options.lineNumbers` doesn't understand the `interval` configuration, the below sequence;
+
+  ```typescript
+  const previousSetting = vscode.window.activeTextEditor.options.lineNumbers;
+  vscode.window.activeTextEditor.options.lineNumbers = TextEditorLineNumbersStyle.Relative;
+  vscode.window.activeTextEditor.options.lineNumbers = previousSetting;
+  ```
+  will result in line numbers being rendered as `"on"` rather than `"interval"`.  
+  See [VSCode #198787][198787].
+
+- Multi-cursor support.  
+  'Go to Line/Column' doesn't bother moving multiple cursors. Should Relative Motion?
 
 If you find something wrong with this extension or have a feature request, please open an [issue] with a detailed description and, if applicable, minimal reproduction case.
 
 [issue]: https://github.com/pyrrho/vscode-relative-motion/issues/new/choose
+[198787]: https://github.com/microsoft/vscode/pull/198787
 
 
 ## Release Notes
