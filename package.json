@@ -20,7 +20,7 @@
     "vscode": "^1.84.0"
   },
   "activationEvents": [],
-  "main": "./out/extension.js",
+  "main": "./out/main.js",
   "contributes": {
     "commands": [
       {
