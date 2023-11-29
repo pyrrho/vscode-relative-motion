@@ -14,7 +14,7 @@
     "url": "https://github.com/pyrrho/vscode-relative-motion/issues"
   },
   "author": "Drew Pirrone-Brusse",
-  "publisher": "Drew Pirrone-Brusse",
+  "publisher": "pyrrho",
   "license": "MIT",
   "engines": {
     "vscode": "^1.84.0"
