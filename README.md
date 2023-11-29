@@ -1,8 +1,8 @@
 # Relative Motion for VSCode
 
-Like 'Go to Line/Column' but relative instead of absolute; vaguely vim-like cursor-relative line-jumping through the Command Pallette.
+Like 'Go to Line/Column' but relative instead of absolute; vaguely vim-like cursor-relative line jumping through the Command Pallette.
 
-Inspiration was taken from the built-in 'Go to Line/Column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension.
+Inspiration was taken from the built-in 'Go to Line/Column' (`workbench.action.gotoLine`) command for the interface and feedback, as well as [EnkelDigital] and [JJ Lee]'s [relativity] extension for the general behavior.
 
 [EnkelDigital]: https://github.com/Enkel-Digital/
 [JJ Lee]: https://github.com/Jaimeloeuf
@@ -14,9 +14,18 @@ Inspiration was taken from the built-in 'Go to Line/Column' (`workbench.action.g
 Provides the following commands;
 
 | Action                         | Keybinding       | Command                       |
-| :----------------------------- | ---------------- | :---------------------------- |
+| :-----                         | ----------       | :------                       |
 | Relative Motion: Navigate Up   | <kbd>alt+k</kbd> | `vscode-relative-motion.up`   |
 | Relative Motion: Navigate Down | <kbd>alt+j</kbd> | `vscode-relative-motion.down` |
+
+The Command Pallette will then accept input in the form;
+
+| Input | Operation                               |
+| :---- | :--------                               |
+| `2`   | Moves up/down 2 rows                    |
+| `4#3` | Moves up/down 4 rows, moves to column 3 |
+| `6:5` | Moves up/down 6 rows, moves to column 5 |
+| `8,7` | Moves up/down 8 rows, moves to column 7 |
 
 ![Relative Motion Demo](images/vscode-relative-motion-demo.gif)
 
